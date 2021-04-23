@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mars.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+            <h1>Get the Mars Data</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape the Data!</a></p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Latest Mars News</h1>
+                <p>
+                    <h3>{{ mars.news_title }}</h3>
+                </p>
+                <p>
+                    <h5>{{ mars.news_p }}</h5>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Featured Mars Image</h3>
+                <p>
+                    <img width="490" src="{{ mars.featured_image_url }}" alt="mars img">
+                </p>
+            </div>
+            <div class="col-md-6">
+                <table border="1" class="dataframe">
+                    <thead>
+                        <tr style="text-align: right;">
+                            <th></th>
+                            <th>Mars</th>
+                            <th>Earth</th>
+                        </tr>
+                        <tr>
+                            <th>Mars - Earth Comparison</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Diameter:</th>
+                            <td>6,779 km</td>
+                            <td>12,742 km</td>
+                        </tr>
+                        <tr>
+                            <th>Mass:</th>
+                            <td>6.39 × 10^23 kg</td>
+                            <td>5.97 × 10^24 kg</td>
+                        </tr>
+                        <tr>
+                            <th>Moons:</th>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>Distance from Sun:</th>
+                            <td>227,943,824 km</td>
+                            <td>149,598,262 km</td>
+                        </tr>
+                        <tr>
+                            <th>Length of Year:</th>
+                            <td>687 Earth days</td>
+                            <td>365.24 days</td>
+                        </tr>
+                        <tr>
+                            <th>Temperature:</th>
+                            <td>-87 to -5 °C</td>
+                            <td>-88 to 58°C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="center">Mars Hemispheres</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <em>Cerberus:</em>
+                <img width="250" src="{{ mars.img_urlc }}" alt="mars img">
+            </div>
+            <div class="col-md-3">
+                <em>Schiaparelli:</em>
+                <img width="250" src="{{ mars.img_urls }}" alt="mars img">
+            </div>
+            <div class="col-md-3">
+                <em>Syrtis:</em>
+                <img width="250" src="{{ mars.img_urlsy }}" alt="mars img">
+            </div>
+            <div class="col-md-3">
+                <em>Valles:</em>
+                <img width="250" src="{{ mars.img_urlv }}" alt="mars img">
+            </div>
+        </div>
+    </div>
+    </div>
+    <section class="table-responsive-md">
+        
+    </section>
+
+</body>
+
+
+
+</html>
